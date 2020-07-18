@@ -1,8 +1,22 @@
 'use strict';
-var userName = prompt("Welcome to my website please tell me your name").toUpperCase();
 var userPoints = 0;
-alert("welcome " + userName + " my name is Mohammad and this is my website please answer the following questions with yes or Know");
-var myPlace = prompt(userName + " do you know where I live?");
+var userName = prompt("Welcome to my website please tell me your name").toUpperCase();
+var questions = ["Ok " + userName + " lets play agame please guess a Number between (0-50)",
+"Ok " + userName + " lets play another agame enter a name of toyota cars model",
+"welcome " + userName + " my name is Mohammad and this is my website please answer the following questions with yes or Know",
+userName + " do you know where I live?",
+userName + " do you how old am I?",
+userName + " Did I studied computer science at collage?",
+"Well this will be a little bit tricky " + userName + " Did I studied at Hashemite University?",
+"Ok let me ask you one last qestion " + userName + " Do I Like Pizza??",
+"Welcome to my website please tell me your name",
+"Welcome to my Website "+ userName];
+
+prompt(questions[9]);
+
+function fiveQuestions(){
+alert(questions[2]);
+var myPlace = prompt(questions[3]);
 switch (myPlace.toLowerCase()) {
     case 'yes':
         alert('Amazing ' + userName + " yes I live in Amman")
@@ -17,7 +31,7 @@ switch (myPlace.toLowerCase()) {
     default:
         break;
 }
-var myAge = prompt(userName + " do you how old am I?");
+var myAge = prompt(questions[4]);
 if (myAge.toLowerCase() == 'yes') {
     alert('You are smart ' + userName + " yes I am 27 years old");
     userPoints += 5;
@@ -28,7 +42,7 @@ if (myAge.toLowerCase() == 'yes') {
 }
 
 
-var myMajor = prompt(userName + " Did I studied computer science at collage?");
+var myMajor = prompt(questions[5]);
 switch (myMajor.toLowerCase()) {
     case 'yes':
         alert('Thats not correct ' + userName + " I studied Mechanical Engineering in collage");
@@ -43,7 +57,7 @@ switch (myMajor.toLowerCase()) {
     default:
         break;
 }
-var myCollage = prompt("Well this will be a little bit tricky " + userName + " Did I studied at Hashemite University?");
+var myCollage = prompt(questions[6]);
 switch (myCollage.toLowerCase()) {
     case 'yes':
         alert('Thats correct ' + userName);
@@ -57,7 +71,7 @@ switch (myCollage.toLowerCase()) {
     default:
         break;
 }
-var myFavaroutMeal = prompt("Ok let me ask you one last qestion " + userName + " Do I Like Pizza??");
+var myFavaroutMeal = prompt(questions[7]);
 switch (myFavaroutMeal.toLowerCase()) {
     case 'yes':
         alert('Yes of course  ' + userName + ' I like to made it too');
@@ -71,9 +85,7 @@ switch (myFavaroutMeal.toLowerCase()) {
     default:
         break;
 }
-
-var questions = ["Ok " + userName + " lets play agame please guess a Number between (0-50)",
-"Ok " + userName + " lets play another agame enter a name of toyota cars model"];
+}
 
 function guessNumber() {
     var myNum = 26;
@@ -112,7 +124,7 @@ function toyotaCars() {
         }
         if (correct) {
             userPoints += 5;
-            alert("Thats correct " + userName + " thank you, your points: "+userPoints);
+            alert("Thats correct " + userName + " thank you");
             
             break;
 
@@ -123,8 +135,12 @@ function toyotaCars() {
     }
     if (correct == false) {
         alert("You exceeded your guesing times the true answers are: " + myArayCars);
-        alert( userName + "  your points: "+userPoints);
+        
     }
+
+}
+function yourPoints(){
+    alert( userName + "  your points: "+userPoints);
 
 }
 
