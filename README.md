@@ -1,7 +1,6 @@
 ## welcome to my website
 
-## Ahmed is the driver
-## Mohammad is the navigator
+
 
 In this webs site we will plays some games and I will count your scores.
 In the first game you should gues a number between 0-50 becarefull you only have 4 iterations.
